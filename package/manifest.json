@@ -4,8 +4,8 @@
   },
   "content_scripts": [
     {
-      "js": ["/content_scripts.js"],
-      "matches": ["<all_urls>"]
+      "matches": ["<all_urls>"],
+      "js": ["/content_scripts.js"]
     }
   ],
   "icons": {
@@ -13,9 +13,9 @@
     "16": "icon.png"
   },
   "manifest_version": 3,
-  "name": "Image Controler",
-  "description": "画像を操作できるツール",
-  "permissions": ["scripting", "contextMenus", "notifications"],
+  "name": "Placeholder into value",
+  "description": "プレースホルダーを値に変換するやつ",
+  "permissions": ["contextMenus"],
   "host_permissions": ["<all_urls>"],
   "version": "1.0.0"
 }

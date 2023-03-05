@@ -1,5 +1,5 @@
 {
-  "name": "chrome-extension-image-controller",
+  "name": "chrome-extension-placeholder-into-value",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heppokofrontend/chrome-extension-image-controller.git"
+    "url": "git+https://github.com/heppokofrontend/chrome-extension-placeholder-into-value.git"
   },
   "keywords": [],
   "author": "heppokofrontend",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/heppokofrontend/chrome-extension-image-controller/issues"
+    "url": "https://github.com/heppokofrontend/chrome-extension-placeholder-into-value/issues"
   },
-  "homepage": "https://github.com/heppokofrontend/chrome-extension-image-controller#readme",
+  "homepage": "https://github.com/heppokofrontend/chrome-extension-placeholder-into-value#readme",
   "devDependencies": {
     "@types/chrome": "^0.0.197",
     "eslint": "^8.34.0",
