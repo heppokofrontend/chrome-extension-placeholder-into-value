@@ -1,5 +1,10 @@
 # chrome-extension-placeholder-into-value
 
+Download: https://chrome.google.com/webstore/detail/placeholder-into-value/algihlehcffcpmokaliahcmebfkekkch
+
+Convert a placeholder to a value.  
+The placeholder is available as a value from the right-click context menu when a placeholder is set in a text field.
+
 ## How to use
 
 1. Find a text field with [placeholders](https://developer.mozilla.org/ja/docs/Web/HTML/Element/input#placeholder).
