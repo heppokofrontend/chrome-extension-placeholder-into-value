@@ -1,4 +1,4 @@
-# chrome-extension-placeholder-into-value
+# プレースホルダーを値に変換するやつ - Placeholder into value
 
 Download: https://chrome.google.com/webstore/detail/placeholder-into-value/algihlehcffcpmokaliahcmebfkekkch
 
