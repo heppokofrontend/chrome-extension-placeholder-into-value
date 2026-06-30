@@ -1,24 +1,37 @@
+import { MENU_ITEM_ID } from './constants';
+
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     type: 'normal',
-    id: 'heppokofrontend.placeholder.into.value',
+    id: MENU_ITEM_ID,
     title: 'placeholder into value',
     contexts: ['editable'],
   });
 });
 
-chrome.contextMenus.onClicked.addListener(async ({ menuItemId }) => {
-  const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
-
-  if (!tab.id) {
+const handleMenuClick = async (menuItemId: string | number) => {
+  if (menuItemId !== MENU_ITEM_ID) {
     return;
   }
 
-  const tabId = tab.id;
+  const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
 
-  if (tab.url?.startsWith('http')) {
-    await chrome.tabs.sendMessage(tabId, { menuItemId }).catch((error) => console.log(error, 1));
+  if (
+    tab === undefined ||
+    tab.id === undefined ||
+    tab.url === undefined ||
+    !tab.url.startsWith('http')
+  ) {
+    return;
   }
 
-  return true;
+  try {
+    await chrome.tabs.sendMessage(tab.id, { menuItemId });
+  } catch (error) {
+    console.warn('[placeholder-into-value] sendMessage failed', error);
+  }
+};
+
+chrome.contextMenus.onClicked.addListener(({ menuItemId }) => {
+  void handleMenuClick(menuItemId);
 });
