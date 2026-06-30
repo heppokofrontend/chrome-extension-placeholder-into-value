@@ -22,14 +22,7 @@ export default [
       },
     },
     rules: {
-      '@typescript-eslint/strict-boolean-expressions': [
-        'error',
-        {
-          allowString: false,
-          allowNumber: false,
-          allowNullableObject: false,
-        },
-      ],
+      '@typescript-eslint/strict-boolean-expressions': 'error',
     },
   },
   prettier,
